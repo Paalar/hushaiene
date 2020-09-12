@@ -60,3 +60,6 @@ sketch
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,react
+
+### NextJs
+.next
