@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Home() {
+const Index: FC = () => {
     return (
         <div className='container'>
             <Head>
@@ -14,6 +14,7 @@ export default function Home() {
                 <h1 className='title'>
           Read <Link href='/posts/first-post'><a>my frist post</a></Link>
                 </h1>
+                <Link href='/counter'><a>Or go to counter!</a></Link>
 
                 <p className='description'>
           Get started by editing <code>pages/index.js</code>
@@ -208,4 +209,6 @@ export default function Home() {
       `}</style>
         </div>
     );
-}
+};
+
+export default Index;

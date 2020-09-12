@@ -29,7 +29,7 @@ module.exports = {
         '@typescript-eslint'
     ],
     rules: {
-        indent: ['error', 4],
+        indent: ['error', 4, { SwitchCase: 1 }],
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
@@ -38,17 +38,14 @@ module.exports = {
         curly: ['error', 'multi'],
         'no-shadow': 'error',
         'block-spacing': 'error',
-        'comma-dangle': ['error', {
-            arrays: 'never',
-            objects: 'never',
-            imports: 'never'
-        }],
+        'comma-dangle': ['error', 'never'],
         'jsx-quotes': ['error', 'prefer-single'],
         'key-spacing': ['error', { beforeColon: false }],
         'max-len': ['error', { code: 110, ignoreUrls: true }],
         'comma-spacing': ['error', { before: false, after: true }],
         'no-multiple-empty-lines': 'error',
         'no-trailing-spaces': 'error',
-        'quote-props': ['error', 'as-needed']
+        'quote-props': ['error', 'as-needed'],
+        'react/prop-types': 'off',
     }
 };
