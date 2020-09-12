@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function FirstPost() {
@@ -5,8 +6,8 @@ export default function FirstPost() {
         <>
             <h1>First Post 2</h1>
             <h2>
-                <Link href="/"><a>Back to home</a></Link>
+                <Link href='/'><a>Back to home</a></Link>
             </h2>
         </>
-    )
+    );
 }
