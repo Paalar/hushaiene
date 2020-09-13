@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const Index: FC = () => {
+const Page: FC = () => {
     return (
         <Component>
             <h1>Hello</h1>
@@ -14,4 +14,4 @@ const Component = styled.div`
   flex-direction: column;
 `;
 
-export default Index;
+export default Page;
