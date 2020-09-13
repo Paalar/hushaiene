@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const Index: FC = () => {
+const Header: FC = () => {
     return (
         <Component>
-            <h1>Hello</h1>
+            <h1>Hushaiene</h1>
         </Component>
     );
 };
 
 const Component = styled.div`
-  display: flex;
-  flex-direction: column;
+    background-color: red;
+    grid-column: 1 / 4;
 `;
 
-export default Index;
+export default Header;

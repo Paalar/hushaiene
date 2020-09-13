@@ -5,12 +5,14 @@ import { MakeStore, createWrapper } from 'next-redux-wrapper';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
+import Layout from './components/Layout';
+import './index.css';
 
-type CustomAppProps = AppProps
-
-const CustomApp: FC<CustomAppProps> = ({ Component, pageProps  }) => (
+const CustomApp: FC<AppProps> = ({ Component, pageProps  }) => (
     <Provider store={store}>
-        <Component {...pageProps}/>
+        <Layout>
+            <Component {...pageProps}/>
+        </Layout>
     </Provider>
 );
 

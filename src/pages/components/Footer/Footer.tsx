@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-const Index: FC = () => {
+const Footer: FC = () => {
     return (
         <Component>
-            <h1>Hello</h1>
+            <p>Footer</p>
         </Component>
     );
 };
 
 const Component = styled.div`
-  display: flex;
-  flex-direction: column;
+    background-color: blue;
+    grid-column: 1 / 4;
 `;
 
-export default Index;
+export default Footer;
