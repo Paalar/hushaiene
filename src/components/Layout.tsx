@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
@@ -10,10 +11,16 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <Header />
-            {children}
+            <Content>
+                {children}
+            </Content>
             <Footer />
         </>
     );
 };
+
+const Content = styled.div`
+    background-color: ${props => props.theme.primaryDark}
+`;
 
 export default Layout;

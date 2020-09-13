@@ -1,4 +1,4 @@
-import React, { ComponentProps, FC } from 'react';
+import React, { ComponentProps } from 'react';
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -53,36 +53,5 @@ const CustomDocument = ({}: CustomDocumentProps): JSX.Element => {
 
 CustomDocument.getInitialProps = getInitialProps;
 CustomDocument.renderDocument = Document.renderDocument;
-
-// export default CustomDocument;
-
-
-// class CustomDocument extends Document {
-//     static async getInitialProps(ctx: any) {
-//         const sheet = new ServerStyleSheet();
-//         const originalRenderPage = ctx.renderPage;
-
-//         try {
-//             ctx.renderPage = () =>
-//                 originalRenderPage({
-//                     enhanceApp: (App: any) => (props: any) =>
-//                         sheet.collectStyles(<App {...props} />)
-//                 });
-
-//             const initialProps = await Document.getInitialProps(ctx);
-//             return {
-//                 ...initialProps,
-//                 styles: (
-//                     <>
-//                         {initialProps.styles}
-//                         {sheet.getStyleElement()}
-//                     </>
-//                 )
-//             };
-//         } finally {
-//             sheet.seal();
-//         }
-//     }
-// }
 
 export default CustomDocument;

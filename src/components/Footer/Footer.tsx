@@ -10,7 +10,7 @@ const Footer: FC = () => {
 };
 
 const Component = styled.div`
-    background-color: blue;
+    background-color: ${props => props.theme.tertiary};
     grid-column: 1 / 4;
 `;
 
