@@ -27,6 +27,7 @@ const StyledButton = styled.button<ButtonProps>`
     min-width: 100px;
     height: min-content;
     cursor: pointer;
+    font-size: 13px;
 
     ${({ trait = 'filled' }) => css`
         background-color: ${backgoundColorMixin(trait)};

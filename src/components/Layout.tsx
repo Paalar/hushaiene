@@ -20,7 +20,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 };
 
 const Content = styled.div`
-    background-color: ${props => props.theme.primaryDark}
+    background-color: ${props => props.theme.primaryDark};
 `;
 
 export default Layout;

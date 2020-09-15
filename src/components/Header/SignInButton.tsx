@@ -13,7 +13,7 @@ const SignInButton: FC<SignInButtonProps> = ({ session }) => {
     return (
         <RegisterDiv>
             <Link href='/auth/signup' passHref>
-                <Button trait='inverse'>
+                <Button>
                     <a>Registrer</a>
                 </Button>
             </Link>

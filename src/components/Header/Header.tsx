@@ -2,6 +2,7 @@ import { useSession } from 'next-auth/client';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import ProfileButton from './ProfileButton';
+import SearchBar from './SearchBar';
 import SignInButton from './SignInButton';
 
 const Header: FC = () => {
@@ -9,6 +10,7 @@ const Header: FC = () => {
     return (
         <Component>
             <img src='./images/hushai.svg' />
+            <SearchBar />
             <ProfileButton user={session?.user} />
             <SignInButton session={session} />
         </Component>
@@ -21,7 +23,7 @@ const Component = styled.div`
     grid-column: 1 / 4;
     display: grid;
     grid-template-columns: 1fr auto auto;
-    grid-gap: 5px;
+    grid-gap: 30px;
     align-items: center;
     padding: 0.4rem;
 
