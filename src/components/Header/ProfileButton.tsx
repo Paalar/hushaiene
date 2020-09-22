@@ -1,17 +1,15 @@
 import React, { FC } from 'react';
-import { Session } from 'next-auth/client';
+import { useSelector } from 'redux/hooks';
 import styled from 'styled-components';
 
-type ProfileButtonProps = {
-    user?: Session['user']
-}
-
-const ProfileButton: FC<ProfileButtonProps> = ({ user }) => {
-    if (!user) return null;
+const ProfileButton: FC = () => {
+    const user = useSelector(state => state.user);
+    const { profile } = user;
+    if (!profile) return null;
     return (
         <Component>
-            <img src={user.image} />
-            <p>{user.name}</p>
+            <img src={profile.image || ''} />
+            <p>{profile.name}</p>
         </Component>
     );
 };

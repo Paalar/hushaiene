@@ -21,6 +21,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
 const Content = styled.div`
     background-color: ${props => props.theme.primaryDark};
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 `;
 
 export default Layout;

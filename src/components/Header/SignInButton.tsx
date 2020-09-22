@@ -1,15 +1,11 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import { signOut, signIn, Session } from 'next-auth/client';
 import Button from 'atoms/Button/Button';
 import styled from 'styled-components';
+import { currentUser } from '../../api/authentication';
 
-type SignInButtonProps = {
-    session: Session
-}
-
-const SignInButton: FC<SignInButtonProps> = ({ session }) => {
-    if (session) return <Button onClick={signOut} trait='text'>Logg ut</Button>;
+const SignInButton: FC = () => {
+    if (currentUser) return <Button trait='text'>Logg ut</Button>;
     return (
         <RegisterDiv>
             <Link href='/auth/signup' passHref>

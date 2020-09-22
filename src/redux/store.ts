@@ -1,4 +1,5 @@
-import { combineReducers, configureStore, createAction, createReducer } from '@reduxjs/toolkit';
+import { configureStore, createAction, createReducer } from '@reduxjs/toolkit';
+import user from './userStore';
 
 export type State = ReturnType<typeof store.getState>;
 export type Dispatch = typeof store.dispatch;
@@ -17,14 +18,12 @@ const counter = createReducer(initialState, builder =>
         .addCase(decrement, (state) => { state.counter -= 1; })
 );
 
-export const compositeReducer = combineReducers({
-    counterState: counter
-});
 
 const store = configureStore({
     reducer: {
-        counterState: counter
-    }
+        counterState: counter,
+        user: user,
+    },
 });
 
 export default store;
