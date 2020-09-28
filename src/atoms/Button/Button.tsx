@@ -21,6 +21,8 @@ const Button: FC<ButtonProps> = ({ children, onClick, trait = 'filled' }) => {
     );
 };
 
+Button.displayName = 'Button';
+
 const StyledButton = styled.button<ButtonProps>`
     padding: 0.5em 2em;
     border-radius: 3px;

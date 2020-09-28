@@ -5,7 +5,9 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 const SearchBar: FC = () => {
     const inputRef = useRef<HTMLInputElement>(null);
-    const setFocus = () => inputRef.current?.focus();
+    const setFocus = () => {
+        if (inputRef.current) inputRef.current.focus();
+    };
     return (
         <Component onClick={setFocus}>
             <AiOutlineSearch />
@@ -17,7 +19,7 @@ const SearchBar: FC = () => {
 const Component = styled.div`
     background-color: #fff;
     padding: 0.5rem 1rem;
-    border: 1px solid ${props => props.theme.tertiary};
+    border: 1px solid ${(props) => props.theme.tertiary};
     border-radius: 25px;
     display: flex;
     cursor: text;

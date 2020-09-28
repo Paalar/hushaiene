@@ -8,16 +8,20 @@ const SignInButton: FC = () => {
     if (currentUser) return <Button trait='text'>Logg ut</Button>;
     return (
         <RegisterDiv>
-            <Link href='/auth/signup' passHref>
-                <Button>
-                    <a>Registrer</a>
-                </Button>
+            <Link passHref href='/auth/signup'>
+                <a>
+                    <Button>
+                        Registrer
+                    </Button>
+                </a>
             </Link>
             <hr />
-            <Link href='/auth/signin' passHref>
-                <Button trait='inverse'>
-                    <a>Logg inn</a>
-                </Button>
+            <Link passHref href='/auth/signin'>
+                <a>
+                    <Button trait='inverse'>
+                    Logg inn
+                    </Button>
+                </a>
             </Link>
         </RegisterDiv>
     );
